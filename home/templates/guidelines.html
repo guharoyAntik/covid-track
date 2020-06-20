@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}Guidelines{% endblock %}
+{% block content %}
+<div class="container pl-4"><h3>Protect yourself and others from getting sick</h3></div>
+<ul class="card-columns">
+  {% for i in "x"|rjust:"3" %}
+    <div class="card bg-dark text-white">
+      <a href="/static/guidelines/basic/{{ forloop.counter }}.png" data-toggle="modal" data-target="#p{{ forloop.counter }}">
+        <img class="card-img" src="/static/guidelines/basic/{{ forloop.counter }}.png" alt="Card image">
+      </a>
+    </div>
+    <div class="modal fade w-100" id="p{{ forloop.counter }}" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="card-img" src="/static/guidelines/basic/{{ forloop.counter }}.png" alt="Card image">
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</ul>
+<div class="container pl-4"><h3>COVID-19 Home care</h3></div>
+<ul class="card-columns">
+  {% for i in "x"|rjust:"3" %}
+    <div class="card bg-dark text-white">
+      <a href="/static/guidelines/homecare/{{ forloop.counter }}.png" data-toggle="modal" data-target="#h{{ forloop.counter }}">
+        <img class="card-img" src="/static/guidelines/homecare/{{ forloop.counter }}.png" alt="Card image">
+      </a>
+    </div>
+    <div class="modal fade w-100" id="h{{ forloop.counter }}" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="card-img" src="/static/guidelines/homecare/{{ forloop.counter }}.png" alt="Card image">
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</ul>
+<div class="container pl-4"><h3>COVID-19: Pregnancy & breastfeeding</h3></div>
+<ul class="card-columns">
+  {% for i in "x"|rjust:"6" %}
+    <div class="card bg-dark text-white">
+      <a href="/static/guidelines/pregnancy/{{ forloop.counter }}.png" data-toggle="modal" data-target="#pr{{ forloop.counter }}">
+        <img class="card-img" src="/static/guidelines/pregnancy/{{ forloop.counter }}.png" alt="Card image">
+      </a>
+    </div>
+    <div class="modal fade w-100" id="pr{{ forloop.counter }}" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="card-img" src="/static/guidelines/pregnancy/{{ forloop.counter }}.png" alt="Card image">
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</ul>
+<div class="container pl-4"><h3>How to cope with stress during 2019-nCoV outbreak</h3></div>
+<ul class="card-columns">
+  {% for i in "x"|rjust:"2" %}
+    <div class="card bg-dark text-white">
+      <a href="/static/guidelines/stress/{{ forloop.counter }}.png" data-toggle="modal" data-target="#s{{ forloop.counter }}">
+        <img class="card-img" src="/static/guidelines/stress/{{ forloop.counter }}.png" alt="Card image">
+      </a>
+    </div>
+    <div class="modal fade w-100" id="s{{ forloop.counter }}" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="card-img" src="/static/guidelines/stress/{{ forloop.counter }}.png" alt="Card image">
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</ul>
+<div class="container pl-4"><h3>Common Myths Busted</h3></div>
+<ul class="card-columns">
+  {% for i in "x"|rjust:"27" %}
+    <div class="card bg-dark text-white">
+      <a href="/static/guidelines/myth/{{ forloop.counter }}.png" data-toggle="modal" data-target="#m{{ forloop.counter }}">
+        <img class="card-img" src="/static/guidelines/myth/{{ forloop.counter }}.png" alt="Card image">
+      </a>
+    </div>
+    <div class="modal fade" id="m{{ forloop.counter }}" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="card-img" src="/static/guidelines/myth/{{ forloop.counter }}.png" alt="Card image">
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</ul>
+{% endblock %}

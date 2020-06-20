@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="card mx-auto" style="width: 24rem;">
+  <div class="card-body mx-auto">
+    <h2 class="card-title text-center">About</h2>
+    <img class="rounded-circle z-depth-2 mx-auto w-50 d-block" src="/static/avatar/antik.jpeg">
+    <h6 class="card-subtitle text-center mb-4 mt-2 text-muted">made by Antik Guha Roy</h6>
+    <div class="card m-2">
+      <div class="card-body pb-1">
+        <h6 class="card-title text-center p-0"><i class="fab fa-github mr-2"></i><a href="#" target="_blank" style="text-decoration: none">source code on github</a> </h5>
+      </div>
+    </div>    
+    <div class="card m-2">
+      <div class="card-body pb-1">
+        <h6 class="card-title text-center p-0"><i class="fas fa-database mr-2"></i><a href="https://api.covid19india.org" target="_blank" style="text-decoration: none">crowdsourced patient database</a></h5>
+      </div>
+    </div>    
+  </div>
+</div>
+{% endblock %}

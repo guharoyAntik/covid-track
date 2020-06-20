@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}News{% endblock %}
+{% block content %}
+<ul class="card-columns">
+  {% for news, desc, img, url in newslist %}
+    <div class="card text-white bg-dark mb-3">
+      <div class="card-body">
+        <h4 class="card-title">{{news}}</h4>
+        <img class="card-img-top" src="{{img}}" alt="Card image cap">
+        <p class="card-text pt-3">{{desc}}</p>
+        <a href="{{url}}" target="_blank" class="btn btn-sm btn-outline-info">Read More</a>
+      </div>
+    </div>
+  {% endfor %}
+</ul>
+{% endblock %}
